@@ -1,0 +1,36 @@
+body {
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
+}
+
+body.home {
+  max-width: unset;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  &.content-sidebar {
+    max-width: 1080px;
+  }
+}
+
+.section-inner,
+.alignwide {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.content-inner
+  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+.entry-content
+  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}

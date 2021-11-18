@@ -1,0 +1,22 @@
+.site-title {
+  text-align: center;
+  margin: 24px 0;
+
+  a {
+    color: $color__text-dull;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+}
+
+.site-header .section-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.entry-header {
+  margin-bottom: 25px;
+}

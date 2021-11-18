@@ -1,0 +1,25 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.wp-block-search .wp-block-search__button {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 100px;
+  border: 1px solid $color__button-border;
+  color: $color__text-main;
+  line-height: 1;
+  padding: 15px 25px;
+  background-color: white;
+
+  &:hover {
+    background-color: $color__button;
+    color: white;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color__button;
+    color: white;
+  }
+}

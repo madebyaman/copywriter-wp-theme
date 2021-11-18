@@ -1,0 +1,149 @@
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  @media (min-width: 680px) {
+    display: block;
+    margin-top: 5px;
+  }
+
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 100%;
+      left: -999em;
+      z-index: 99999;
+
+      ul {
+        left: -999em;
+        top: 0;
+      }
+
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          display: block;
+          left: auto;
+        }
+      }
+
+      a {
+        width: 200px;
+      }
+    }
+
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
+
+  li {
+    position: relative;
+
+    &:hover > a,
+    &.focus > a {
+      color: $color__text;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color__text-dull;
+  }
+
+  .menu-main-menu-container {
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 25px;
+
+    li {
+      margin-top: 10px;
+      margin-left: 20px;
+
+      @media (min-width: 680px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.toggled .menu-main-menu-container {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 680px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-previous {
+    flex: 1 0 50%;
+  }
+
+  .nav-next {
+    text-align: end;
+    flex: 1 0 50%;
+  }
+}
+
+.blog-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  div:nth-child(2) .pagination-label {
+    text-align: end;
+  }
+
+  .pagination-label {
+    font-size: 12px;
+    color: $color__text-dull;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 22px;
+
+    a {
+      border: 0;
+    }
+  }
+}
