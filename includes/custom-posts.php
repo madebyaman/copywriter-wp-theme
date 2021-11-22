@@ -1,6 +1,6 @@
 <?php
 
-function cptui_register_my_cpts()
+function copywriter_wp_custom_post()
 {
 
 /**
@@ -40,9 +40,9 @@ function cptui_register_my_cpts()
     register_post_type("project", $args);
 }
 
-add_action('init', 'cptui_register_my_cpts');
+add_action('init', 'copywriter_wp_custom_post');
 
-function cptui_register_my_taxes()
+function copywriter_wp_custom_taxes()
 {
 
     /**
@@ -76,4 +76,4 @@ function cptui_register_my_taxes()
     ];
     register_taxonomy("skills", [ "project" ], $args);
 }
-add_action('init', 'cptui_register_my_taxes');
+add_action('init', 'copywriter_wp_custom_taxes');
